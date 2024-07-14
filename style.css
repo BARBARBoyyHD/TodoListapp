@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  background-color: #e5e5e5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 300px;
+  height: 500px;
+  border: 5px solid #abcea1;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+.app::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+#addnew {
+  display: flex;
+  background-color: rgba(171, 206, 161, 0.35);
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.fa-plus {
+  background-color: #abcea1;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#tasks {
+  display: grid;
+  gap: 14px;
+}
+#tasks div {
+  background-color: #e2eede;
+  border: 3px solid #abcea1;
+  padding: 5px;
+  border-radius: 6px;
+  display: grid;
+  gap: 4px;
+}
+.option {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+.option i {
+  cursor: pointer;
+}
+#msg {
+  color: red;
+}
+
+@media (max-width: 768px) {
+    .app {
+      width: 100%;
+      height: 100vh;
+    }
+  
+    #addnew {
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+    }
+  
+    .option {
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app {
+      width: 100%;
+      height: 100vh;
+    }
+  
+    #tasks {
+      gap: 10px;
+    }
+  
+    #tasks div {
+      padding: 5px;
+    }
+  
+    .option {
+      gap: 5px;
+    }
+  }
